@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+table {
+    margin: auto;
+    width: fixed;
+    background-color: silver;
+    border:solid black  3px;
+}
+#red {
+    background-color: red;
+
+}
+img {
+    text-align: center;
+}
+#center {
+    text-align: center;
+}
+caption{
+    text-align: center;
+    color: white;
+    font-size: 70px
+}
+tr,td{
+    border:solid black  3px;
+}

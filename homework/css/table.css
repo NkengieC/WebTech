@@ -1,0 +1,39 @@
+caption {
+font-size: xx-large;
+color: navy;
+}
+
+img {
+    padding: 0%;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+
+table{
+    width: 70%;
+    text-align: center;
+    border: 3px thick black solid;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin: auto;
+
+
+}
+#first{
+    text-align: center;
+    font-style: italic bold;
+    background-color: white;
+}
+#second {
+    background-color: yellow;
+}
+tr, td {
+    border: 2px thick solid black;
+    background-color: silver;
+    margin: fixed;
+}
+.extra {
+    background-color: lime;
+
+}

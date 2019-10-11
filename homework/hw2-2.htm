@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+</head>
+<body>
+    <table>
+        <caption>Soap Survey</caption>
+        <form action="">
+        <tr>
+            <td>Soap image</td>
+            <td>Soap Color Preference</td>
+            <td>Soap Purchase Intent</td>
+            <td>Soap Features Liked</td>
+        </tr>
+        <tr>
+            <td>
+                    <img src="images/soap-1.jpg">
+            </td>
+            <td>
+            Green <input type="radio" name="preference" value="green"/> <br/>
+            Gold (shown) <input type="radio" name="preference" value="gold"/> <br/>
+            Red <input type="radio" name="preference" value="red"/>
+            </td>
+            <td>
+            At $5.00 unit  
+            <br/>  
+            <select name="intent">
+            <option value="Definitely Buy">Definitely Buy</option> 
+            <option value="Likely Buy">Likely Buy</option>
+            <option value="Undecided">Undecided</option>
+            <option value="Unlikely Buy">Unlikely Buy</option>
+            <option value="Not Buy">Not Buy</option>
+            </select>
+            </td>
+            <td>
+              <input type="checkbox" name="Q1" value="Shape"/>
+               Shape <br/>
+               <input type="checkbox" name="Q1" value="Size"/>
+               Size <br/>
+               <input type="checkbox" name="Q1" value="Smell"/>
+               Smell <br/>
+               <input type="checkbox" name="Q1" value="texture"/>
+               Texture <br/>
+            </td>
+        </tr>
+        <tr>
+                <td>
+                        <img src="images/soap-2.jpg">
+                </td>
+                <td>
+                Ivory <input type="radio" name="preference" value="Ivory"/> <br/>
+                Sandal Wood(shown) <input type="radio" name="preference" value="Sandal Wood"/> <br/>
+                Pink <input type="radio" name="preference" value="Pink"/>
+                </td>
+                <td>
+                At $8.00 unit   
+                <br/> 
+                <select name="intent">
+                <option value="Definitely Buy">Definitely Buy</option>
+                <option value="Likely Buy">Likely Buy</option>
+                <option value="Undecided">Undecided</option>
+                <option value="Unlikely Buy">Unlikely Buy</option>
+                <option value="Not Buy">Not Buy</option>
+                </select>
+                </td>
+                <td>
+                  <input type="checkbox" name="Q1" value="Shape"/>
+                   Shape <br/>
+                   <input type="checkbox" name="Q1" value="Size"/>
+                   Size <br/>
+                   <input type="checkbox" name="Q1" value="Smell"/>
+                   Smell <br/>
+                   <input type="checkbox" name="Q1" value="texture"/>
+                   Texture <br/>
+                </td>
+            </tr>
+            <tr>
+                <td id= "center" colspan="4">Tell us about yourself</td>
+            </tr>
+            <tr>
+                <td>
+                        Gender  
+                        <select name="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>   
+                </td>
+                <td rowspan="3">
+                    Age: (under 25 enter1, 25-40 enter 2, else enter 3)
+                    <textarea name="comments" rows="1" cols="1"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                        Your comments are welcome:
+                        <br/>
+                        <textarea name="comments" rows="5" cols="29"></textarea>
+
+                </td>
+                <td class="expand" rowspan="2">
+                    <input type="submit" value="Submit" name="submit"/>
+                    <input id="red" type="reset" value="Oops" name="reset"/>
+
+                </td>
+            </tr>
+
+        </form>
+    </table>
+    /* “I, Nkengie Charles, pledge my honor that I have neither received 
+    nor provided unauthorized assistance during the completion of this work.*/
+</body>
+</html>
