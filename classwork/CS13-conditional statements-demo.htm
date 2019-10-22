@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditional Statements Demo</title>
+</head>
+<body>
+    <h3>Conditional Statement Demo</h3>
+    <button onclick="ask()">Click Me</button>
+    <p>You just entered: <span id= "input"></span></p>
+    <p>Result: <span id = "result"></span></p>
+
+    <script type="text/javascript">
+    function ask(){
+//         let message = prompt("what day of week is it today?");
+// console.log(message);
+// let userInput= document.getElementById("input");
+// userInput.innerHTML = "<i>" + message + "</i>";
+// let name = prompt ("what is your name?");
+// userInput.innerHTML +=", <i>" + name + "</i>"
+// if (name.toLocaleLowerCase() == "zoe" && message.toLocaleLowerCase() == "tuesday"){
+//     result.innerHTML = "Correct!"
+// }
+// else{
+//     result.innerHTML = "Wrong!"
+// }
+    
+    let gender = prompt ("what is your gender?");
+    let userInput = document.getElementById("input");
+    userInput.innerHTML = "<i>" + gender + "</i>";
+
+    let result = document.getElementById("result");
+    if (gender.toLocaleLowerCase() == "male"|| gender.toLocaleLowerCase() == "man"){
+        result.innerHTML= "Hello Sir!";
+    }
+    else {
+        result.innerHTML= "Hello ma'am!"
+    }
+    }
+    </script>
+</body>
+</html>

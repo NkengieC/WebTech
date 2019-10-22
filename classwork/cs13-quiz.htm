@@ -21,9 +21,14 @@
             i.style.textIndent= "50px";
         }
 
-        function center{
+        function center(){
             let y = document.getElementById("center");
             y.style.textAlign = "center";
+            let a = document.getElementById("img2");
+            a.src = "jaylenbrown2.jpg";
+    
+            let x = document.getElementById("disappear");
+            x.style.display = "none";
         }
     </script>
 </head>
@@ -36,11 +41,11 @@
         below
         button .</p>
     <button onclick= "center()">I am rich!</button>
-    <p>
+    <p id="disappear">
         I need a big contract!
     </p>
     <div>
-        <img alt="jaylen brown" height="100" src="images/jaylenbrown1.png" />
+        <img  id= "img2" alt="jaylen brown" height="100" src="jaylenbrown1.png" />
     </div>
 </body>
 
