@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript Demo</title>
+    <script type="text/javascript">
+    function calculate(){
+let x = document.getElementById("varX").innerHTML;
+let y = document.getElementById("varY").innerHTML;
+   
+    // console.log(x,y);
+    let result = parseFloat(x) ** parseFloat(y);
+console.log(result)
+
+    let r = document.getElementById("result");
+    r.innerHTML ="<u>"+result+"</u>";
+    r.style.backgroundColor = "pink";
+}
+    </script>
+</head>
+<body>
+    <p>
+        x = <span id="varX">2019</span>
+    </p>
+    <p>
+        y = <span id= "varY">1017</span>
+    </p>
+    <p>
+        the result of calculation is <span id="result">?.</span>
+    </p>
+    <p><button onclick="calculate()">Click Me</button></p>
+</body>
+</html>

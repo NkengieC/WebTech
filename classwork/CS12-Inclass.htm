@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CS12-InClass</title>
+
+    <style type="text/css">
+      /* Your styles go here */
+      body {
+        text-align: center;
+      }
+      img{
+          width: 400px;
+      }
+    </style>
+    <script type="text/javascript">
+    function enlarge(imageID){
+        let i = document.getElementById(imageID);
+let w = i.width;
+// console.log(w);
+w = w * 1.5;
+console.log(w);
+console.log(i.width);
+i.style.width = w + "px";
+}
+function delarge(imageID){
+    let i = document.getElementById(imageID);
+    let w = i.width;
+    w = w / 1.5;
+    i.style.width = w + "px";
+}
+    </script>
+  </head>
+
+  <body>
+    <h2>Manipulating Styles and Images</h2>
+
+    <p>
+      <img
+      id="usa"
+      onmouseout="delarge(this.id)"
+      onmouseover="enlarge(this.id)"
+        src="usa.png"
+        alt="Image goes here"
+        title="map of USA"
+
+      />
+    </p>
+    <p>
+        <img
+        id="tiger"
+        onmouseout="delarge(this.id)"
+        onmouseover="enlarge(this.id)"
+          src="tiger1.jpg"
+          alt="tiger"
+          title="tiger"
+    
+        />
+      </p>
+
+    <hr />
+  </body>
+</html>
