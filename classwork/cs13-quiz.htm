@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-  <title>JavaScript Quiz One</title>
-  <style type="text/css">
-    body {
-      margin: 10px 150px;
-    }
 
-    div {
-      margin-top: 20px;
-    }
-  </style>
-  <script type="text/javascript"> 
-  function indent(){
-      let i = document.getElementById(indent);
-  }
-  </script>
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>JavaScript Quiz One</title>
+    <style type="text/css">
+        body {
+            margin: 10px 150px;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function indent() {
+            let i = document.getElementById("indent");
+            i.style.textIndent= "50px";
+        }
+
+        function center{
+            let y = document.getElementById("center");
+            y.style.textAlign = "center";
+        }
+    </script>
 </head>
+
 <body>
-  <h1>JavaScript Quiz 1</h1>
-  <p id="indent">Modify this page so that clicking anywhere in this paragraph indents its first line by 50px. Clicking on the button
-    should center the heading, change the image from jaylenbrown1.png to jaylenbrown2.jpg, and hide the paragraph below
-    button .</p>
-  <button>I am rich!</button>
-  <p>
-    I need a big contract!
-  </p>
-  <div>
-    <img alt="jaylen brown" height="100" src="images/jaylenbrown1.png"/>
-  </div>
+    <h1 id= "center">JavaScript Quiz 1</h1>
+    <p onclick= "indent()" id="indent">Modify this page so that clicking anywhere in this paragraph indents its first line by 50px. Clicking
+        on the button
+        should center the heading, change the image from jaylenbrown1.png to jaylenbrown2.jpg, and hide the paragraph
+        below
+        button .</p>
+    <button onclick= "center()">I am rich!</button>
+    <p>
+        I need a big contract!
+    </p>
+    <div>
+        <img alt="jaylen brown" height="100" src="images/jaylenbrown1.png" />
+    </div>
 </body>
+
 </html>
