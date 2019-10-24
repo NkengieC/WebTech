@@ -24,6 +24,14 @@ w = w * 1.5;
 console.log(w);
 console.log(i.width);
 i.style.width = w + "px";
+if (imageID == "usa"){
+      h.innerHTML = "This is a USA map."
+
+    }
+    else if (imageID == "tiger")
+    {
+      h.innerHTML = "The big tiger is swatching you"
+    }
 }
 function delarge(imageID){
     let i = document.getElementById(imageID);
@@ -31,15 +39,8 @@ function delarge(imageID){
     w = w / 1.5;
     i.style.width = w + "px";
     let h = document.getElementById("h");
-
-    if (imageID == "usa"){
-      h.innerHTML = "This is a USA map."
-
-    }
-    else (imageID == "tiger")
-    {
-      h.innerHTML = "The big tiger is swatching you"
-    }
+document.getElementById ("h").innerHTML = "Manipulating Styles and Images"
+   
 
 }
     </script>

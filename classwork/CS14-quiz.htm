@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>JavaScript Quiz 2</title>
+  <style type="text/css">
+    body {
+      margin: 10px 150px;
+    }
+    div {
+      margin-top: 20px;
+    }
+    img {
+      border: 1px green solid;
+    }
+  </style>
+   <script type="text/javascript">
+   function heading(imageID){
+       let a = document.getElementById(imageID);
+       let h = document.getElementById("h");
+       let s = document.getElementById("smile");
+       let m = document.getElementById("serious");
+if (imageID == "serious"){
+    h.innerHTML = "Jaylen brown is Serious"
+    s.style.display = "none"
+   
+}
+else if (imageID == "smile"){
+    h.innerHTML = "Jaylen brown is Smiling"
+    m.style.display = "none"
+   
+}
+else if (imageID == "leaf"){
+    h.innerHTML = "Let's Go, Celtics!"
+    m.style.display = "inline"
+    s.style.display = "inline"
+    
+   
+}
+
+   }
+   </script>
+</head>
+<body>
+  <h1 id="h">JavaScript Quiz 2</h1>
+  <p>Please create <strong>one</strong> function to do the following: (a) when user clicks on first picture, h1 must be
+    changed to "Jaylen Brown is Serious", the second picture must disappear; (b) when user clicks on the second picture,
+    h1 must be changed to "Jaylen Brown is Smiling", the first picture must disappear; (c) when user clicks on the third
+    picture, h1 must be changed to "Let's Go, Celtics!", the first two pictures must re-appear.
+  <div>
+    <img onclick = "heading(this.id)" id= "serious"alt="jaylen brown 1" height="100" id="jaylen1" src="jaylenbrown1.png"/>
+    <img  onclick = "heading(this.id)" id = "smile"alt="jaylen brown 2" height="100" id="jaylen2" src="jaylenbrown2.jpg"/>
+    <img  onclick = "heading(this.id)"id = "leaf" alt="clover" height="100" id="clover" src="clover.jpg"/>
+  </div>
+</body>
+</html>
