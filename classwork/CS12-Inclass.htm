@@ -30,12 +30,23 @@ function delarge(imageID){
     let w = i.width;
     w = w / 1.5;
     i.style.width = w + "px";
+    let h = document.getElementById("h");
+
+    if (imageID == "usa"){
+      h.innerHTML = "This is a USA map."
+
+    }
+    else (imageID == "tiger")
+    {
+      h.innerHTML = "The big tiger is swatching you"
+    }
+
 }
     </script>
   </head>
 
   <body>
-    <h2>Manipulating Styles and Images</h2>
+    <h2 id= "h">Manipulating Styles and Images</h2>
 
     <p>
       <img
