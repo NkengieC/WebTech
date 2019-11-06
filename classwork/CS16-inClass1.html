@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>CS16-InClass1</title>
+    <style type="text/css">
+        form {
+            background-color: Silver;
+            font-family: Arial;
+            padding: 30px 50px;
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        h2 {
+            text-align: center;
+            color: Black;
+        }
+    </style>
+    <script>
+        function choose() {
+            let myForm = document.getElementById("form1");
+            let userChoice = "Nothing is checked yet!";
+            let colorRadioArray = myForm.colors;
+            for (let i = 0;
+                i < colorRadioArray.length; i = i + 1) {
+                console.log("Iteration" + i + ":");
+                console.log("Color" + i + colorRadioArray[i].value);
+                console.log("Is checked: " + colorRadioArray[i].checked);
+
+                if (colorRadioArray[i].checked) {
+                    userChoice = colorRadioArray[i].value;
+                    console.log(colorRadioArray[i].value + "is selected");
+                }
+                else {
+                    console.log(colorRadioArray[i].value + "is not selected");
+                }
+                console.log("");
+
+            }
+            document.getElementById("form1").style.backgroundColor = userChoice;
+
+            let selectionArray = myForm.colors;
+            for (let i = 0;
+                i < selectionArray.length; i = i + 1) {
+                console.log("Iteration" + i + ":");
+                console.log("Color" + i + selectionArray[i].value);
+                console.log("Is checked: " + selectionArray[i].checked);
+
+                if (selectionArray[i].checked) {
+                    userChoice = selectionArray[i].value;
+                    console.log(selectionArray[i].value + "is selected");
+                }
+                else {
+                    console.log(selectionArray[i].value + "is not selected");
+                }
+                console.log("");
+
+            }
+            document.getElementById("box1").innerHTML.display = userChoice;
+            return false;
+
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form1" action="" method="post">
+        <h2>Processing Radio Button and Check Box</h2>
+        <p>
+            Please select a background color for the form:
+        </p>
+        <p>
+            <label>Green:<input name="colors" type="radio" value="green" /></label>
+            <label>Yellow:<input name="colors" type="radio" value="yellow" /></label>
+            <label>Lime:<input name="colors" type="radio" value="lime" /></label>
+            <label>Aqua:<input name="colors" type="radio" value="aqua" /></label>
+        </p>
+        <p>Please select your favorite magazines: <br />
+            <label><input name="mags" type="checkbox" value="Sports Illustrated" />Sports Illustrated</label><br />
+            <label><input name="mags" type="checkbox" value="Wired" />Wired</label><br />
+            <label><input name="mags" type="checkbox" value="National Geographic" />National Geographic</label><br />
+            <label><input name="mags" type="checkbox" value="The New Yorker" />The New Yorker</label><br />
+            <label><input name="mags" type="checkbox" value="Time" />Time</label>
+        </p>
+        <p>
+            <label>Your selections:<br>
+                <textarea id="box1" cols="40" name="result" rows="4"></textarea>
+            </label>
+        </p>
+        <p>
+            <input onclick="return choose()" name="submit" type="submit" value="Go!" />
+            <input name="Reset" type="reset" value="Clear!" />
+        </p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Demo</title>
+
+    <script>
+        function Choose() {
+            let myForm = document.getElementById("form1");
+            let userChoice = "Nothing is checked yet!";
+            //     let a = myForm.colors;
+
+            //     if (a[0].checked){
+            //         userChoice = a[0].value;
+            //         console.log(userChoice);
+            //     }
+            //     else if (a[1].checked){
+            //         userChoice = a[1].value;
+            //     }
+            //     else if (a[2].checked){
+            //         userChoice = a[2].value;
+            //     }  else if (a[3].checked){
+            //         userChoice = a[3].value;
+            //     }
+            //   else if (a[4].checked){
+            //         userChoice = a[4].value;
+            //     }    else if (a[5].checked){
+            //         userChoice = a[5].value;
+            //     }
+
+            let colorRadioArray = myForm.colors;
+            for (let i = 0;
+                i < colorRadioArray.length; i = i + 1) {
+                console.log("Iteration" + i + ":");
+                console.log("Color" + i + colorRadioArray[i].value);
+                console.log("Is checked: " + colorRadioArray[i].checked);
+
+                if (colorRadioArray[i].checked) {
+                    userChoice = colorRadioArray[i].value;
+                    console.log(colorRadioArray[i].value + "is selected");
+                }
+                else {
+                    console.log(colorRadioArray[i].value + "is not selected");
+                }
+                console.log("");
+
+            }
+            document.getElementById("heading1").style.color = userChoice;
+            let lines= "";
+            const roster = ["Aiswarya", "Flynn", "Carolina", "Carmencita Gabrielle",
+            "Hyojin", "Jaylen", "Julia", "Junsu", "Kevin", "Luna", "Michael", "Nkengie", "Owen", "Qinyi", "Shanshan",
+            "Saloni", "Yara", "Yi Ni Britney", "Yin Chu", "Zoe"]
+
+            for (let i=0; i<roste.length; i++){
+                lines += "<li>"+ roster[i] + ": " 
+            }
+            document.getElementById("names").innerHTML=lines;
+
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="heading1">Array Demo</h1>
+    <form action="" id="form1">
+        <label>
+            Red: <input type="radio" name="colors" value="red" />
+
+        </label>
+        <label>
+            Blue: <input type="radio" name="colors" value="Blue" />
+
+        </label>
+        <label>
+            Green: <input type="radio" name="colors" value="green" />
+
+        </label>
+        <label>
+            Yellow: <input type="radio" name="colors" value="yellow" />
+
+        </label>
+        <label>
+            Orange: <input type="radio" name="colors" value="orange" />
+
+        </label>
+        <label>
+            Pink: <input type="radio" name="colors" value="pink" />
+
+        </label>
+
+        <p>
+            <button onclick=" return Choose()">Click</button>
+            <input type="reset" value="clear" />
+        </p>
+
+    </form>
+    <p>
+        <ul id="names"></ul>
+    </p>
+</body>
+
+</html>
