@@ -1,84 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>CS15-InClass2 - Temperature Converter</title>
     <style type="text/css">
-      form {
-        font-family: Arial;
-        font-weight: bold;
-        padding: 60px;
-        width: 50%;
-        margin-right: auto;
-        margin-left: auto;
-        background-color: Silver;
-      }
-      h1 {
-        font-family: Arial;
-        font-weight: bold;
-        text-align: center;
-      }
-      div#d1 {
-        margin-bottom: 40px;
-      }
+        form {
+            font-family: Arial;
+            font-weight: bold;
+            padding: 60px;
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: Silver;
+        }
+
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        div#d1 {
+            margin-bottom: 40px;
+        }
     </style>
     <script>
-    function manipulate(){
-        let myForm = document.getElementById("form2");
-        let cel = myForm.cel.value;
-        let far = myForm.far.value;
-        
+        function display() {
 
-        if (cel =="" && far =="" {
-            alert ("Please enter a Valid Temp")
-        } 
-    
+            let myForm = document.getElementById("form1");
+            let Celsius = myForm.cel.value;
+            //console.log(name);
+            let Fahrenheit = myForm.far.value;
+
+            if (isNaN(Celsius)) {
+                alert("Please enter a valid temperature.");
+            }
+            else if (isNaN(Fahrenheit)) {
+                alert("Please enter a valid temperature.");
+            }
+
+            else if (Celsius != "") {
+                myForm.far.value = parseFloat((Celsius) * (9 / 5) + 32).toFixed(2);
+
+
+            }
+            else if (Fahrenheit != "") {
+                myForm.cel.value = parseFloat((Fahrenheit) - 32 * (5 / 9)).toFixed(2);
+
+            }
+
+            else if (Celsius == "" || Fahrenheit == "") {
+                alert("please enter a temperature");
+            }
+
+            return false;
         }
-         else if (cel {far = cel * (9/5) + 32
-
-         }
-         else { cel = (far - 32) * (5/9)
-
-         }
-
-         return false;
-    }
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Your HTML goes here -->
     <h1>Celsius Fahrenheit Converter</h1>
-    <form action="" method="post" id="form2">
-      <div id="d1">
-        <label>
-          Celsius:
-          <input type="text" name="cel" size="10" />
-        </label>
-        <label>
-          Fahrenheit:
-          <input type="text" name="far" size="10" />
-        </label>
-      </div>
-      
-
-      <div style="margin-left:100px">
-        <input
-          type="submit"
-          name="submit"
-          value="Convert"
-          style="width:80px; height:40px;"
-          onclick="return manipulate()"
-        />
-        <input
-          type="reset"
-          name="reset"
-          value="Clear"
-          style="width:80px; height:40px;"
-        />
-      </div>
+    <form id="form1" action="" method="post">
+        <div id="d1">
+            <label>Celsius:</label>
+            <input name="cel" size="10" type="text" />
+            <label>Fahrenheit:</label>
+            <input name="far" size="10" type="text" />
+        </div>
+        <div>
+            <input name="submit" type="submit" value="Convert" onclick="return display ()" />
+            <input name="reset" type="reset" value="Clear" />
+        </div>
     </form>
-  </body>
+</body>
+
 </html>
