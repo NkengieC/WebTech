@@ -39,7 +39,7 @@
             let from = myForm.from.value;
             let to = myForm.to.value;
             let sum = 1;
-            for (let i = parseFloat(from); i< parseFloat(to); i++){
+            for (let i = parseFloat(from); i<= parseFloat(to); i++){
                 sum *= i;
             }
             document.getElementById("result").innerHTML = sum;

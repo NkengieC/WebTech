@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Q2 - Web Tech - Fall 2018</title>
+  <style type="text/css">
+    table {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    img {
+      width: 70%;
+    }
+    h1 {
+      font-family: Arial;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      font-family: arial;
+      font-size: 16pt;
+      color: navy;
+      padding: 10px 100px 10px 100px;
+      text-align: left;
+    }
+  </style>
+  <script type="text/javascript">
+  function changePic(imgID){
+let image = document.getElementById(imgID);
+let smile = document.getElementById("smile");
+let frown = document.getElementById("frown");
+
+if (imgID == "smile"){
+document.getElementById("frown1").style.display = "none";
+document.getElementById("smile1").style.color = "red";
+document.getElementById("smile1").style.fontFamily ="lucida";
+document.getElementById("smile1").style.fontSize = "2em";
+document.getElementById("smile1").style.backgroundColor = "yellow"; 
+
+
+}
+else if (imgID =="frown"){
+ document.getElementById("smile1").style.display = "none";
+document.getElementById("frown1").style.color = "green";
+document.getElementById("frown1").style.fontFamily = "arial";
+document.getElementById("frown1").style.fontSize = "2em";
+document.getElementById("frown1").style.backgroundColor = "blue"; 
+}
+ return false; }
+  </script>
+</head>
+<body>
+  <h1>Web Tech Exam - Q2 (20 points)</h1>
+  <p>
+    There are two images shown below along with two text strings. Create the functionality whereby if you click on
+    the Smiley.jpg image, the text string "Web Tech Rocks" is shown in red font, size 2em, using Lucida Handwriting
+    with a yellow background. If you click on frown.jpg image, the string "Web Tech Sucks" is shown in green font,
+    bold, size 2em, with a blue background and using Arial font. When one text string is shown, the other should not
+    be displayed. For full credit, write this as a single function. For 15 points, write it using as many functions
+    as necessary.
+  </p>
+  <table>
+    <tr>
+      <td><img onclick=" return changePic(this.id)" id ="smile" alt="Smiling Face" src="smiley.jpg" title="Smile"></td>
+      <td id=smile1>Web Tech Rocks!</td>
+    </tr>
+    <tr>
+      <td><img onclick=" return changePic(this.id)" id="frown" alt="Frown Face" src="frown.jpg" title="Sad"></td>
+      <td id="frown1" >Web Tech Sucks!</td>
+    </tr>
+  </table>
+</body>
+</html>
