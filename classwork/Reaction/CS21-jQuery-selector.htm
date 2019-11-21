@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>jQuery Selector</title>
+  <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+    function findSelected() {
+      let selected;
+      // selected = ?
+    // selected = $("#para-1")  Javascript only , You can also use p.first
+    // selected = $("p:nth(2)");  // pup
+    // selected = $(".color-red.color-green");
+    // selected = $(".color-red"); Both items with the same class name
+    // selected = $("div>p"); to select the first ps (direct children of div)
+    // selected = $("input[name = 'name']"); select input
+    // selected = $("input[name! = 'password'"); select every input besides password
+      selected.css("background-color", "#ffd351");
+    }
+  </script>
+</head>
+<body>
+  <div id="test-jquery">
+    <p class="color-red" id="para-1">JavaScript</p>
+    <p class="color-green" id="para-2">Java</p>
+    <p class="color-red color-green">PHP</p>
+    <p class="color-black">Python</p>
+    <form action="" class="test-form" target="_blank">
+      <fieldset>
+        <p>
+          <label>name: <input name="name"/></label>
+        </p>
+        <p>
+          <label>email: <input name="email"/></label>
+        </p>
+        <p>
+          <label>password: <input name="password" type="password"/></label>
+        </p>
+        <p>
+          <input onclick="findSelected();" type="button" value="sign up">
+        </p>
+      </fieldset>
+    </form>
+  </div>
+  <br/>
+  <div>
+    Select the following elements using jQuery selectors:
+    <ul>
+      <li>JavaScript Only</li>
+      <li>PHP Only</li>
+      <li>JavaScript and PHP</li>
+      <li>All the programming languages</li>
+      <li>the name input</li>
+      <li>the name input and the email input</li>
+    </ul>
+    Note: Do not change any code in body.
+  </div>
+</body>
+</html>
