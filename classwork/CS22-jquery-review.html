@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>JQuery Template File</title>
+  <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+        $("#before").click(function(){
+            $("h3").before("<h2>Today is Tuesday.<h2>");
+
+        });
+     $("#after").click(function(){
+         $("h3").after("<h4> Tomorrow is another day.<h4>");
+
+     });
+     $("h1").dblclick(function(){
+         $("h3").toggle();
+     });
+    });
+  </script>
+</head>
+<body>
+<h1>Click buttons</h1>
+<h3>This is just a normal h3</h3>
+<button id="before">Before</button>
+<button id="after">After</button>
+</body>
+</html>

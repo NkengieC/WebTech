@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Form using jQueryUI</title>
+    <style type="text/css">
+        body {
+            width: 50%;
+            margin: auto;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .ar {
+            text-align: right;
+        }
+    </style>
+    <script type="text/javascript">
+        /* Your JavaScript goes here */
+    </script>
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+
+        $("#accordion").accordion();
+
+
+
+
+
+
+
+
+
+
+
+        $("#tabs").tabs();
+
+
+
+
+
+        $("#datepicker").datepicker({
+            inline: true
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Hover states on the static widgets
+        $("#dialog-link, #icons li").hover(
+            function () {
+                $(this).addClass("ui-state-hover");
+            },
+            function () {
+                $(this).removeClass("ui-state-hover");
+            }
+        );
+    </script>
+</head>
+
+<body>
+    <h1>Feedback Form</h1>
+    <h2>Please provide feedback about your experience with our product</h2>
+    <form action="" enctype="text/plain" method="post">
+        <div id="accordion">
+            <h3>Contact Information</h3>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <table style="margin-left:50px">
+                    <tr>
+                        <td class="ar">Your Name:</td>
+                        <td><input name="YourName" size="30" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td class="ar">EMail Address:</td>
+                        <td><input name="email" size="30" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td class="ar">Phone:</td>
+                        <td><input name="phone" size="30" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>Perferred contact:</td>
+                        <td style="padding-left:30px">
+                            EMail <input name="pcontact" type="radio" value="e" /> Phone
+                            <input name="pcontact" type="radio" value="p" />
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <h3>Satisfaction</h3>
+            <div>
+                <p>
+                    How satisfied were you with our product?
+                    <select name="satisfaction">
+                        <option value="vs">Very Satisfied</option>
+                        <option value="s">Satisfied</option>
+                        <option value="n">Neither Satisfied nor Dissatisfied</option>
+                        <option value="d">Dissatisfied</option>
+                        <option value="vd">Very Dissatisfied</option>
+                    </select>
+                </p>
+                <p>Please explain your satisfaction choice above:</p>
+                <p><textarea cols="60" name="comments" rows="5"></textarea></p>
+                <p>
+                    Where have you used our product (Select all that apply)? <br />
+                    Kitchen <input name="where" type="checkbox" value="kitchen" /> Dining
+                    Room <input name="where" type="checkbox" value="dr" /> Living Room
+                    <input name="where" type="checkbox" value="lr" /> Office
+                    <input name="where" type="checkbox" value="office" /> Other
+                    <input name="where" type="checkbox" value="office" />
+                </p>
+            </div>
+            <h3>Submission</h3>
+            <p style="text-align:center">
+                <input name="Submit" type="submit" value="Submit" />
+                <input name="Reset" type="reset" value="Reset" />
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>
